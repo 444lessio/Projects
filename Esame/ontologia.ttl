@@ -1,0 +1,64 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.IncidentiSulLavoro.it/ontology/IncidentiSulLavoro> a rdfs:Class .
+
+<http://www.IncidentiSulLavoro.it/ontology/Luogo> a rdfs:Class .
+
+<http://www.IncidentiSulLavoro.it/ontology/Persona> a rdfs:Class .
+
+<http://www.IncidentiSulLavoro.it/ontology/ConSenzaMezzoTrasporto> a rdf:Property ;
+    rdfs:domain <http://www.IncidentiSulLavoro.it/ontology/IncidentiSulLavoro> ;
+    rdfs:range xsd:string .
+
+<http://www.IncidentiSulLavoro.it/ontology/DataAccadimento> a rdf:Property ;
+    rdfs:domain <http://www.IncidentiSulLavoro.it/ontology/IncidentiSulLavro> ;
+    rdfs:range xsd:date .
+
+<http://www.IncidentiSulLavoro.it/ontology/DataMorte> a rdf:Property ;
+    rdfs:domain <http://www.IncidentiSulLavoro.it/ontology/Persona> ;
+    rdfs:range xsd:date .
+
+<http://www.IncidentiSulLavoro.it/ontology/DecisioneIstruttoriaEsitoMortale> a rdf:Property ;
+    rdfs:domain <http://www.IncidentiSulLavoro.it/ontology/IncidentiSulLavoro> ;
+    rdfs:range xsd:string .
+
+<http://www.IncidentiSulLavoro.it/ontology/DefinizioneAmministrativa> a rdf:Property ;
+    rdfs:domain <http://www.IncidentiSulLavoro.it/ontology/IncidentiSulLavoro> ;
+    rdfs:range xsd:string .
+
+<http://www.IncidentiSulLavoro.it/ontology/Eta> a rdf:Property ;
+    rdfs:domain <http://www.IncidentiSulLavoro.it/ontology/Persona> ;
+    rdfs:range xsd:integer .
+
+<http://www.IncidentiSulLavoro.it/ontology/Genere> a rdf:Property ;
+    rdfs:domain <http://www.IncidentiSulLavoro.it/ontology/Persona> ;
+    rdfs:range xsd:string .
+
+<http://www.IncidentiSulLavoro.it/ontology/GiorniIndennizzati> a rdf:Property ;
+    rdfs:domain <http://www.IncidentiSulLavoro.it/ontology/IncidentiSulLavoro> ;
+    rdfs:range xsd:integer .
+
+<http://www.IncidentiSulLavoro.it/ontology/Identificativocaso> a rdf:Property ;
+    rdfs:domain <http://www.IncidentiSulLavoro.it/ontology/IncidentiSulLavoro> ;
+    rdfs:range xsd:string .
+
+<http://www.IncidentiSulLavoro.it/ontology/Indennizzo> a rdf:Property ;
+    rdfs:domain <http://www.IncidentiSulLavoro.it/ontology/IncidentiSulLavoro> ;
+    rdfs:range xsd:string .
+
+<http://www.IncidentiSulLavoro.it/ontology/LuogoAccadimento> a rdf:Property ;
+    rdfs:domain <http://www.IncidentiSulLavoro.it/ontology/IncidentiSulLavoro>,
+        <http://www.IncidentiSulLavoro.it/ontology/Luogo> ;
+    rdfs:range <http://www.IncidentiSulLavoro.it/ontology/Luogo>,
+        xsd:string .
+
+<http://www.IncidentiSulLavoro.it/ontology/LuogoNascita> a rdf:Property ;
+    rdfs:domain <http://www.IncidentiSulLavoro.it/ontology/Persona> ;
+    rdfs:range xsd:string .
+
+<http://www.IncidentiSulLavoro.it/ontology/persona> a rdf:Property ;
+    rdfs:domain <http://www.IncidentiSulLavoro.it/ontology/IncidentiSulLavoro> ;
+    rdfs:range <http://www.IncidentiSulLavoro.it/ontology/Persona> .
+
