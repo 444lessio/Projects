@@ -4,3 +4,7 @@ Repository dei progetti di Alessio Alduina
 Il progetto contenuto nella cartella Reti è un gestori di parcheggi, dove il server è il gestore e i vari client sono chi occuppa i posti nel parcheggio.
 ----Per realizzarlo è stato usato javascript e NodeJS--------
 ----Per compilare avviare prima il server con il comando "node server.js", in seguito collegare il client con il comando (eseguito in un altro terminale) node client.js-----
+
+
+La cartella Esame e il file Incidenti_Lavorativi sono strettamente collegati. La cartella contiene tutti i file necessari al funzionamento dei vari dataset, mentre il file contiene la tesi scritta con i codici, il tutto con Jupiter
+---Si denota il mancato caricamento di due file TTL, data la loro dimensione, che completano il progetto-----
