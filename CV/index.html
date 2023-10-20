@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Alessio Alduina Portfolio</title>
+</head>
+<body>
+    
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class='bx bxs-message-square-x' onclick="closemenu()" ></i>
+                </ul>
+                <i class='bx bx-menu' onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Front-End Developer</p>
+                <h1>Hi, I'm <span>Alessio Alduina </span><br> From Italy</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--About-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+
+                </div>
+                <div class="about-col-2">
+                    <h1>About <span>Me</span></h1>
+                    <p> Born in Italy in 2001, <br> I am an aspiring 
+                        front-end developer and computer science 
+                        student at Unipa
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Exceprience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web Interfaces</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Exp1</span><br>Application of phyton for an open data project. Which involved the analysis and cleaning of multiple datasets, the fusion of datasets, and the interlinking transformation of the 5-star data</li>
+                            <li><span>Exp2</span><br>Creation and management of a large database, designed to replicate the creation and management of a database like that of Spotify</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2019 - High School Graduation - Score 90/100</span><br>Economy and Computer Science Institute</li>
+                            <li><span>2019/Now - Bachelor Degree</span><br>Computer Science</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Services-->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class='bx bx-code-alt'></i>
+                    <h2>Web Design</h2>
+                    <p>
+                        I offer a web page design and creation service. Both on a web and mobile level. All thanks to the accumulated skills of HTML, CSS AND JS
+                    </p>
+                </div>
+                <div>
+                    <i class='bx bx-code-alt'></i>
+                    <h2>UI/UX Design</h2>
+                    <p>
+                        The skills developed allow me to play the role of UX and/or UI designer, in jobs such as e-commerce
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Portfolio-->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Work1.png">
+                    <div class="layer">
+                        <h3>Calculator</h3>
+                        <a href="https://github.com/444lessio/Projects/blob/main/Calcolatrice/index.html"><i class='bx bx-link-external' ></i></a>
+                    </div>
+                </div>
+                
+            </div>
+            <a href="" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!--Contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class='bx bxs-send'></i>alessioalduina39@gmail.com</p>
+                    <p><i class='bx bxs-phone' ></i>3801315734</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/alessio-alduina-3436841a7"><i class='bx bxl-linkedin' ></i></a>
+                        <a href="https://github.com/444lessio"><i class='bx bxl-github' ></i></a>
+                        <a href="https://www.instagram.com/444lessio"><i class='bx bxl-instagram' ></i></a>
+                    </div>
+                    <a href="Alessio-Alduina CV.pdf" download class="btn btn2" >Download CV</a>
+                </div>
+            </div>
+           
+        </div>
+        <div class="copyright">
+            <p>Copyright © Alessio Alduina</p>
+        </div>
+    </div>
+    
+   
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById(sidemenu);
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
